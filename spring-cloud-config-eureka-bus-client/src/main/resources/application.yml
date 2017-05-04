@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config-eureka-bus-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server-eureka-client
+  rabbitmq:
+    host: 192.168.61.129
+    port: 5672
+    username: admin
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8883
+management:
+  security:
+    enabled: false
+
