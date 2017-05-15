@@ -84,3 +84,12 @@
   ```
     spring-cloud-consul
   ```
+
+第十四篇: 自定义路由(custom zuul configuration)
+
+ **从数据库中读取路由配置：**
+
+```
+   spring-cloud-gateway-custom-zuul-config
+   spring-cloud-gateway-custom-zuul-config-test
+```
