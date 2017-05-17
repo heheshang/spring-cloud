@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: output-demo
+  cloud:
+     instance-count: 1
+     instance-index: 0
+     kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2182
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
+     stream:
+        bindings:
+          output:
+            destination: event-demo
+            content-type: text/plain
+            producer:
+              partitionCount: 1

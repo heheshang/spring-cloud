@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: input-demo
+  cloud:
+     instance-count: 1
+     instance-index: 0
+     kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2182
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
+     stream:
+        bindings:
+          input:
+            destination: event-demo
+            group: s1
+            consumer:
+              autoCommitOffset: false
+              concurrency: 1
+              partitioned: false
+  kafka:
+      consumer:
+        group-id: test1
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 8082

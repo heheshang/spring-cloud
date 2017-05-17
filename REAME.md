@@ -93,3 +93,10 @@
    spring-cloud-gateway-custom-zuul-config
    spring-cloud-gateway-custom-zuul-config-test
 ```
+
+第十五篇：kafka 配置生产者消费者
+
+```
+    spring-cloud-kafka-producer
+    spring-cloud-kafka-customer
+```

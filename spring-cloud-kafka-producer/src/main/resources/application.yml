@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+   kafka:
+      consumer:
+        group-id: test1
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+        batch-size: 1000
+      template:
+        default-topic: my-replicated-topic
+      listener:
+        concurrency: 3
+      bootstrap-servers: localhost:9092
+
