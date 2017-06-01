@@ -100,3 +100,16 @@
     spring-cloud-kafka-producer
     spring-cloud-kafka-customer
 ```
+第十六篇 微服务：Eureka+Zuul+Ribbon+Feign+Hystrix构建微服务架构
+
+``` html
+http://m.blog.csdn.net/article/details?id=53282031
+```
+第十七篇 集成swagger
+```
+spring-cloud-swagger
+```
+第十八篇 简单使用disruptor
+```
+spring-cloud-disruptor
+```
