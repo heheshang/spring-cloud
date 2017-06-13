@@ -299,4 +299,4 @@ public class CoreHeaderInterceptor extends HandlerInterceptorAdapter {
 
 
 
-![jpg](https://github.com/heheshang/spring-cloud/blob/master/spring-cloud-practice/static/QQ%E6%88%AA%E5%9B%BE20170613111731.jpg)
+![jpg](http://github.com/heheshang/spring-cloud/blob/master/spring-cloud-practice/static/QQ%E6%88%AA%E5%9B%BE20170613111731.jpg)
