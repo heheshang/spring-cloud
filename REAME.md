@@ -113,3 +113,8 @@ spring-cloud-swagger
 ```
 spring-cloud-disruptor
 ```
+第十九篇 使用Spring Cloud Security OAuth2搭建授权服务
+
+```
+spring-cloud-security-oauth2
+```

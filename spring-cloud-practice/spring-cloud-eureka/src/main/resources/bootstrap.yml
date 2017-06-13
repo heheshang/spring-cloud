@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: eureka
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+      fail-fast: true
+server:
+  port: 8761
