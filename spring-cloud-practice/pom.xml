@@ -42,11 +42,11 @@
 	<modules>
 		<module>spring-cloud-core</module>
 		<module>spring-cloud-config</module>
-		<module>spring-cloud-consumer</module>
 		<module>spring-cloud-eureka</module>
+		<module>spring-cloud-provider</module>
+		<module>spring-cloud-provider-one</module>
+		<module>spring-cloud-consumer</module>
 		<module>spring-cloud-zuul</module>
-        <module>spring-cloud-provider</module>
-        <module>spring-cloud-provider-one</module>
     </modules>
 
 	<repositories>
