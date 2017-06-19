@@ -1,0 +1,7 @@
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      cluster-nodes: 10.10.8.216:9300
+      cluster-name: es-5.0-test
