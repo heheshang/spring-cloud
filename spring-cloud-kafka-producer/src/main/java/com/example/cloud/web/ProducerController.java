@@ -17,6 +17,6 @@ public class ProducerController {
 
 	@RequestMapping(value = "/send/{msg}", method = RequestMethod.GET)
 	public void send(@PathVariable("msg") String msg) {
-		sendService.sendMessage();
+		sendService.sendMessage(msg);
 	}
 }

@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  kafka:
+    consumer:
+      group-id: test1
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      batch-size: 1000
+    template:
+      default-topic: my-replicated-topic
+    listener:
+      concurrency: 3
+    bootstrap-servers: localhost:9092
+
+  application:
+    name: output-ignite
+  cloud:
+     instance-count: 1
+     instance-index: 0
+     kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2182
+          auto-add-partitions: true
+          auto-create-topics: true
+          min-partition-count: 1
+     stream:
+        bindings:
+          output:
+            destination: event-ignite
+            content-type: text/plain
+            producer:
+              partitionCount: 1

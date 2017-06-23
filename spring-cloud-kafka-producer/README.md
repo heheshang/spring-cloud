@@ -30,7 +30,17 @@ zkserver
 
 3.1 下载安装文件： http://kafka.apache.org/downloads.html
 
-3.2 解压文件（本文解压到 G:\\kafka_2.11-0.10.0.1）3.3 打开G:\\kafka_2.11-0.10.0.1\\config3.4 从文本编辑器里打开 server.properties3.5 把 log.dirs的值改成 "G:\\kafka_2.11-0.10.0.1\\kafka-logs"3.6 打开cmd3.7 进入kafka文件目录: cd /d G:\\kafka_2.11-0.10.0.1\\3.8 输入并执行以打开kafka:
+3.2 解压文件（本文解压到 G:\\kafka_2.11-0.10.0.1）3.3 打开G:\\kafka_2.11-0.10.0.1\\config
+
+3.4 从文本编辑器里打开 server.properties
+
+3.5 把 log.dirs的值改成 "G:\\kafka_2.11-0.10.0.1\\kafka-logs"
+
+3.6 打开cmd
+
+3.7 进入kafka文件目录: cd /d G:\\kafka_2.11-0.10.0.1\\
+
+3.8 输入并执行以打开kafka:
 
 ```
 .\\bin\\windows\\kafka-server-start.bat .\\config\\server.properties

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: input-demo
+    name: input-ignite
   cloud:
      instance-count: 1
      instance-index: 0
@@ -14,7 +14,7 @@ spring:
      stream:
         bindings:
           input:
-            destination: event-demo
+            destination: event-ignite
             group: s1
             consumer:
               autoCommitOffset: false
