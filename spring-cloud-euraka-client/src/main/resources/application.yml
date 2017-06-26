@@ -6,5 +6,5 @@ server:
 eureka:
   client:
     service-url:
-#      defaultZone: http://localhost:8761/eureka/,http://localhost:8769/eureka/
-      defaultZone: http://www.peer1.com:8761/eureka/,http://www.peer2.com:8769/eureka/
+      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://www.peer1.com:8761/eureka/,http://www.peer2.com:8769/eureka/
