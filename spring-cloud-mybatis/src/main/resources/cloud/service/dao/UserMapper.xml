@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+
+<mapper namespace="com.example.demo.dao.UserDao">
+ &lt;!&ndash;   <select id="findAll" resultType="com.example.demo.model.User">
+    select * from user
+  </select>
+
+    <select id="findById" resultType="com.example.demo.model.User">
+    SELECT * FROM USER  WHERE id =#{0}
+  </select>
+
+    <select id="findByParam" resultType="com.example.demo.model.User">
+  SELECT * FROM  USER WHERE username = #{name,jdbcType=VARCHAR}
+</select>&ndash;&gt;
+
+</mapper>-->

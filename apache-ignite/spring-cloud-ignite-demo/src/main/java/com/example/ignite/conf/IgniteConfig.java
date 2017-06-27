@@ -8,8 +8,7 @@ import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * Created by Administrator on 2017/6/20 0020.
@@ -25,13 +24,11 @@ public class IgniteConfig {
 		return Ignition.start(cfg);
 	}
 
+
 	@Bean
 	TcpDiscoverySpi tcpDiscoverySpi(){
 		TcpDiscoverySpi spi = new TcpDiscoverySpi();
-		TcpDiscoveryVmIpFinder ipFinder = new  TcpDiscoveryVmIpFinder();
-		List<String> address = new ArrayList<>();
-		address.add("192.168.61.129:47500");
-		ipFinder.setAddresses(address);
+		TcpDiscoveryVmIpFinder ipFinder = new  TcpDiscoveryVmIpFinder().setAddresses(Arrays.asList(new String[]{"192.168.61.129:47500..47503"}));
 		spi.setIpFinder(ipFinder);
 		return spi;
 	}
