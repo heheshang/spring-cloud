@@ -27,4 +27,19 @@ public interface CityDao {
             @Result(property = "description",column = "description")
     })
     City findByName(@Param("cityName") String cityName);
+
+
+    /**
+     * 根据城市名称，查询城市信息
+     *
+     * @param id 城市名
+     */
+    @Select("select id, province_id, city_name, description from City where id=#{id}")
+    @Results({
+            @Result(property = "id",column = "id",javaType = Long.class),
+            @Result(property = "provinceId",column = "province_id",javaType = Long.class),
+            @Result(property = "cityName",column = "city_name"),
+            @Result(property = "description",column = "description")
+    })
+    City findById(@Param("id") Long id);
 }
