@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="index::head"></head>
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+<script src="https://cdn.bootcss.com/vue-resource/1.3.4/vue-resource.min.js"></script>
 <body>
 <nav th:replace="index::header"></nav>
-<div class="container">
-    <span th:text="${name}"></span>
+<div class="container" id="home">
+    {{message}}
+   <!-- <span th:text="${name}"></span>-->
 </div>
+
+
+<script>
+
+
+  new Vue({
+        el: '#home',
+        data: {
+            /*gridColumns: ['customerId', 'companyName', 'contactName', 'phone'],*/
+            message: {},
+            apiUrl: 'http://localhost:8090/api/users/1'
+        },
+        ready: function() {
+            this.getCustomers()
+        },
+        methods: {
+            getCustomers: function() {
+                this.$http.get(this.apiUrl).then(function (response) {
+                    this.$set('message', response.data)
+                })
+            .catch(function(response) {
+                console.log(response)
+            })
+            }
+        }
+    })
+</script>
 </body>
 </html>
-
